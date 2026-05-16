@@ -14,7 +14,7 @@ export class Cart {
   info() {
     console.log(`id: ${this.id}`);
     for (let product of this.products) {
-      console.log(`product: x${product.quantity} - ${product.product.name} `);
+      console.log(`product: x${product.quantity} - ${product.product.name}`);
     }
   }
 }

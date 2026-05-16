@@ -21,9 +21,9 @@ export class Product {
     console.log(`id: ${this.id}`);
     console.log(`imgUrl: ${this.imgUrl}`);
     console.log(`name: ${this.name}`);
-    console.log(`category: ${this.category}`);
+    console.log(`category: ${this.category.name}`);
     console.log(`price: ${this.price} UAH`);
-    console.log(`manufacturer: ${this.manufacturer}`);
+    console.log(`manufacturer: ${this.manufacturer.name}`);
     console.log(`rating: ${this.rating}`);
   }
 

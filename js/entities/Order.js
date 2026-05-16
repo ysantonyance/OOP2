@@ -6,7 +6,7 @@ export class Order {
   status;
   totalPrice;
 
-  constructor(id, date, products = [], customer ,status = "Pending" ) {
+  constructor(id, date, products = [], customer, status = "Pending") {
     this.id = id;
     this.date = date;
     this.products = products;
@@ -27,8 +27,11 @@ export class Order {
   info() {
     console.log(`id: ${this.id}`);
     console.log(`date: ${this.date}`);
+
     for (let product of this.products) {
-      console.log(`product: x${product.quantity} - ${product.product.name} `);
+      let perProduct = product.product.price * product.quantity;
+
+      console.log(`product: x${product.quantity} - ${product.product.name} -> ${perProduct} UAH`);
     }
     console.log(`customer: ${this.customer.name}`);
     console.log(`totalPrice: ${this.TotalPrice()} UAH`);
